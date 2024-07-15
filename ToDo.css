@@ -17,7 +17,7 @@
     min-height: 10vh;
     max-width: 40vw;
     background-color: #efefee;
-    margin: 00px;
+    margin: 10px; /* Initial alignment to the left */
     padding: 20px 10px 25px;
     border-radius: 10px;
     position: relative;
@@ -173,18 +173,22 @@ ul li span:hover {
     }
 
     .row {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        flex-direction: row; /* Ensure flex-direction stays row */
+        align-items: center;
+        justify-content: space-between;
         padding-left: 10px;
+        margin-bottom: 15px; /* Adjust spacing for mobile */
     }
 
     input {
-        width: 100%;
-        margin-bottom: 10px;
+        width: calc(100% - 110px); /* Adjust width to fit with the button */
+        margin-bottom: 0; /* Remove margin to keep elements side by side */
     }
 
     button {
-        width: 100%;
+        width: 100px;
         padding: 10px 0;
+        margin-bottom: 0; /* Remove margin to keep elements side by side */
     }
 }
